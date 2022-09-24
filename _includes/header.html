@@ -1,0 +1,62 @@
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function menu_btn() {
+            let s = document.getElementById("speed_bar");
+            if (s.style.display === "none") {
+                s.style.display = "block";
+            } else {
+                s.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <nav class="flex items-center justify-between flex-wrap bg-teal-600 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
+                 style="filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(102%) contrast(102%)"
+                 src="/assets/img/leaf.png">
+              </img>
+            <span class="font-semibold text-xl tracking-tight ">DataSet</span>
+        </div>
+        <div class="block lg:hidden">
+            <button onclick="menu_btn()"
+                    class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
+                    菜单</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+            </button>
+        </div>
+        <!-- This will center text on mobile, and left align it on screens 640px and wider -->
+        <!--        <div class="text-center sm:text-left"></div>-->
+        <div id="speed_bar" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden sm:hidden">
+            <div class="text-md ">
+                <a href="/"
+                   class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 border-b-2">
+                    {{include.header_home}}
+                </a>
+                <a href="/#paper"
+                   class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 border-b-2">
+                    {{include.header_paper}}
+                </a>
+                <a href="/about"
+                   class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white border-b-2">
+                    {{include.header_about}}
+                </a>
+            </div>
+            <div>
+                <a href="#"
+                   class="ml-0 sm:ml-8 inline-block text-sm px-4 py-2 leading-none border-2 rounded text-white border-white
+                   hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">{{include.header_to_download}}
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+</body>
