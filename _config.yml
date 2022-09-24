@@ -5,7 +5,11 @@ title: "DataSet" #site_title 副标题
 # 在 html中可以通过 {{ site.title }} 使用
 
 defaults:
-  -scope:
-    path: "assets/img"
+    -scope:
+        path: "assets/img"
+    values:
+        image: true
+    -scope:
+        path: "assets/css"
   values:
-    image: true
+        image: true
