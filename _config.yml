@@ -1,4 +1,4 @@
-namespace : "DataSet"
+namespace : ""
 url: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "DataSet" #site_title 副标题
@@ -9,7 +9,4 @@ defaults:
         path: "assets/img"
     values:
         image: true
-    -scope:
-        path: "assets/css"
-  values:
-        image: true
+
