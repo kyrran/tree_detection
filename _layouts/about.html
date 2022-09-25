@@ -5,12 +5,14 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <title>{{ site.title }} - {{ page.title }} </title>
+<!--    <link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}">-->
 </head>
 <body>
 
 {% include header.html
+home_url = "https://foreverlz1111.github.io/dataset_jekyll/"
+header_to_download_url = "https://github.com/foreverlz1111"
 header_to_download = "去GitHub仓库"
 header_about = "关于作者"
 header_paper = "论文"
@@ -20,6 +22,7 @@ header_home = "首页"
 <!--<b>这句话来自文件 about.html 部署时注释此处</b>-->
 {% include about.html
 about_img_url = "assets/img/class/class7.jpg"
+email = "hi@ziyuan.work"
 content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit.
 Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis,
 vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis,
@@ -35,6 +38,8 @@ one_url = "https://zafu.edu.cn"
 one_url_name = "浙江农民大学"
 two_url = "https://163.com"
 two_url_name = "网易"
+author = "foreverlz1111"
+
 %}
 </body>
 </html>

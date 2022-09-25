@@ -3,7 +3,7 @@ url: ""
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "DataSet" #site_title 副标题
 # 在 html中可以通过 {{ site.title }} 使用
-
+author : "foreverlz1111"
 defaults:
     -scope:
         path: "assets/img"

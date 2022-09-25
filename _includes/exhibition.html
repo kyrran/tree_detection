@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-<!--    <script src="https://cdn.tailwindcss.com"></script>-->
+    <!--    <script src="https://cdn.tailwindcss.com"></script>-->
     <link rel="stylesheet" href="assets/css/tailwind.css">
     <meta charset="UTF-8">
     <title>Title</title>
@@ -17,9 +17,12 @@
 
         <div class="rounded-t-lg overflow-hidden text-center p-4"><a href="{{include.one_button_url}}">
             <button class="hover:border-transparent hover:text-teal-500 hover:bg-white bg-teal-500 hover:border-teal-100 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path></svg>
+                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path>
+                </svg>
                 <span>{{include.one_button_name}}</span>
-            </button></a>
+            </button>
+        </a>
         </div>
     </div>
 </div>
@@ -96,7 +99,8 @@
 <div class="bg-teal-200 p-6 w-11/12 sm:max-w-5xl mx-auto text-sm sm:text-lg rounded-lg m-4">
     <img class="float-right ml-4 my-2 h-32" src="">
     <p class="text-center"><span class="font-bold">{{include.four_paper_sug}}</span>
-        <a class="text-purple-700 text-opacity-100 p-2 underline" href={{include.four_paper_url}}> {{include.four_paper_url}} </a>
+        <a class="text-purple-700 text-opacity-100 p-2 underline" href={{include.four_paper_url}}>
+            {{include.four_paper_url}} </a>
     </p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh
         nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet,

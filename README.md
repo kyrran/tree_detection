@@ -10,9 +10,9 @@ bash run.sh
 ```
 
 ### 截图
-- 横屏<img src="/home/sakurinn/project/blog/Screenshot_XL.png" title="大型设备"/>
+- 横屏![](Screenshot_XL.png "大型设备")
 
-- 竖屏<img src="/home/sakurinn/project/blog/Screenshot_SM.png" title="小型设备"/>
+- 竖屏![](Screenshot_SM.png "小型设备")
 
 ### 引入本地文件
 - (官方提供的引入本地css)错误用法：
@@ -28,10 +28,27 @@ bash run.sh
 ```angular2html
 <img src="assets/img/love.jpg">
 ```
-### 新增和修改
-
-- _layout文件夹为页面，通过设计_include内html组件并在页面中引用:
+- 引入链接路径:
 ```angular2html
+<a href="">首页</a> <!- 正确！ -->
+
+<a href="/">首页</a> <!- 错误！ -->
+```
+### 新增和修改
+- markdown文件为_layout文件夹中html的前端。编辑根目录index.md文件( --- 也包括在内)，将其指向_default/default.html:
+```angular2html
+---
+layout: default
+something: "better"
+---
+```
+- 在_default/default.html中使用markdown文件定义的常量：
+```
+<p>{{page.something}}</p>  <!- 会得到输出better -->
+```
+***
+- _layout文件夹为页面，通过设计_include内html组件并在页面中引用:
+```
 <!- 这里是default.html。我要引用_include文件夹中的eye.html，顺便传点常量过去给它 -->
 <body>
 {% include eye.html word="to_there" myname="foreverlz1111" %}
@@ -43,7 +60,6 @@ bash run.sh
 <p>{{ include.word}}</p>
 </body>
 ```
-
 
 ### How jekyll design template,unfortunately they do not
 
