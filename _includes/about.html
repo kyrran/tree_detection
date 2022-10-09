@@ -9,10 +9,10 @@
 <body>
 <div class="bg-gray-200 p-4 w-11/12 sm:max-w-5xl mx-auto m-4 rounded-2xl">
     <p class="text-2xl font-bold text-center m-2">关于作者</p>
-    <img class="mb-4 h-32 m-auto" src="{{include.about_img_url}}">
+    <img class="mb-4 h-32 m-auto" src="{{site.data.about.about_img_url}}">
 
-    <p class="font-bold">电子邮箱：<span>{{include.email}}</span></p>
+    <p class="font-bold">电子邮箱：<span>{{site.data.about.email}}</span></p>
 
-    <p>{{ include.content }}</div>
+    <p>{{ site.data.about.content }}</div>
 </body>
 </html>

@@ -23,9 +23,9 @@
         <div class="flex items-center flex-shrink-0 text-white mr-6">
             <img class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54"
                  style="invert(100%) sepia(1%) saturate(2%) hue-rotate(235deg) brightness(111%) contrast(100%)"
-                 src="assets/img/leaf.png">
+                 src="{{site.data.head.header_icon_url}}">
             </img>
-            <span class="font-semibold text-xl tracking-tight ">DataSet</span>
+            <span class="font-semibold text-xl tracking-tight ">{{site.data.head.header_title}}</span>
         </div>
         <div class="block lg:hidden">
             <button onclick="menu_btn()"
@@ -40,23 +40,23 @@
         <!--        <div class="text-center sm:text-left"></div>-->
         <div id="speed_bar" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden sm:hidden">
             <div class="text-md ">
-                <a href="{{include.home_url}}"
+                <a href="{{site.data.head.home_url}}"
                    class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 border-b-2">
-                    {{include.header_home}}
+                    {{site.data.head.header_home}}
                 </a>
-                <a href="{{include.home_url}}#paper"
+                <a href="{{site.data.head.home_url}}#paper"
                    class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 border-b-2">
-                    {{include.header_paper}}
+                    {{site.data.head.header_paper}}
                 </a>
-                <a href="{{include.home_url}}about"
+                <a href="{{site.data.head.home_url}}about"
                    class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white border-b-2">
-                    {{include.header_about}}
+                    {{site.data.head.header_about}}
                 </a>
             </div>
             <div>
-                <a href="{{include.header_to_download_url}}"
+                <a href="{{site.data.head.header_to_download_url}}"
                    class="ml-0 sm:ml-8 inline-block text-sm px-4 py-2 leading-none border-2 rounded text-white border-white
-                   hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">{{include.header_to_download}}
+                   hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">{{site.data.head.header_to_download}}
                 </a>
             </div>
         </div>

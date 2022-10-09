@@ -2,7 +2,19 @@
 
 <head>
     <!--    <script src="https://cdn.tailwindcss.com"></script>-->
-    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!--    <link rel="stylesheet" href="assets/css/tailwind.css">-->
+    <script src="https://cdn.tailwindcss.com/3.1.8"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -10,106 +22,82 @@
 
 
 <div class="flex rounded-t-sm overflow-hidden border-t border-gray-400 m-4">
-    <div class="flex-1 mt-2 rounded w-full max-w-3xl mx-auto text-sm sm:text-lg float-left">
-        <p class="text-2xl font-bold text-center ">{{ include.one_title }}</p>
-        <p class="font-bold italic">最近更新时间：{{ include.update_time }}</p>
-        <p class="">{{include.one_p1}}</p>
 
-        <div class="rounded-t-lg overflow-hidden text-center p-4"><a href="{{include.one_button_url}}">
+    <div class="flex-1 mt-2 rounded w-full max-w-3xl mx-auto text-sm sm:text-lg float-left">
+        <p class="text-2xl font-bold text-center ">{{ site.data.exhibition.one_title }}</p>
+        <p class="font-bold italic">最近更新时间：{{ site.data.exhibition.update_time }}</p>
+        <p class="">{{site.data.exhibition.one_p1}}</p>
+
+        <div class="rounded-t-lg overflow-hidden text-center p-4"><a href="{{site.data.exhibition.one_button_url}}">
             <button class="hover:border-transparent hover:text-teal-500 hover:bg-white bg-teal-500 hover:border-teal-100 text-white font-bold py-2 px-4 rounded inline-flex items-center">
-                <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <svg class="fill-current w-4 h-4 mr-2" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path>
                 </svg>
-                <span>{{include.one_button_name}}</span>
+                <span>{{site.data.exhibition.one_button_name}}</span>
             </button>
         </a>
         </div>
     </div>
 </div>
 
-<p class="text-2xl font-bold text-center border-t border-gray-400 p-2">{{include.two_title}}</p>
+<p class="text-2xl font-bold text-center border-t border-gray-400 p-4">{{site.data.exhibition.two_title}}</p>
 <div class="w-full max-w-5xl mx-auto rounded-t-sm overflow-hidden text-sm sm:text-lg">
-    <div class=" flex-1 grid grid-rows-2 grid-flow-col gap-3 justify-center">
-        <div class="row-span-3 m-2">
-            <img class=" w-full rounded-lg " src="{{include.url_of_photo1}}"><span>{{include.title_of_photo1}}</span>
-            <img class="w-full rounded-lg mt-1"
-                 src="{{include.url_of_photo2}}"><span>{{include.title_of_photo2}}</span>
-            <img class=" w-full rounded-lg mt-1"
-                 src="{{include.url_of_photo3}}"><span>{{include.title_of_photo3}}</span>
-        </div>
-        <div class="row-span-1 col-span-2 m-2"><img class=" w-full rounded-lg" src="{{include.url_of_photo4}}"><span>{{include.title_of_photo4}}</span>
-        </div>
 
-        <div class="row-span-2 col-span-2"><img class=" w-full rounded-lg" src="{{include.url_of_photo5}}">
-            <span>{{include.title_of_photo5}}</span>
-            <img class=" w-full rounded-lg" src="{{include.url_of_photo6}}"><span>{{include.title_of_photo6}}</span>
+
+    <div class="not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25 mb-8">
+        <div class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]"
+             style="background-position: 10px 10px;">
+            <p class="p-4">{{ site.data.exhibition.two_describe}}</p>
         </div>
-        <div class="row-span-2 col-span-2 m-2"><img class=" w-full rounded-lg" src="{{include.url_of_photo7}}">
-            <span>{{include.title_of_photo7}}</span>
-            <img class=" w-full rounded-lg mt-1"
-                 src="{{include.url_of_photo8}}"><span>{{include.title_of_photo8}}</span></div>
+        <div class="relative rounded-xl overflow-auto">
+            <div class="w-full flex gap-12 snap-x overflow-x-auto py-14">
+                {% for c in site.data.class %}
+                <div class="snap-start scroll-ml-6 shrink-0 relative first:pl-6 last:pr-[calc(100%-50rem)]">
+                    <img class="relative shrink-0 w-auto h-80 rounded-lg shadow-xl bg-white"
+                         src="{{c.url}}">
+                    <p class="text-center">{{c.title}}</p>
+                    <p class="text-center text-gray-700 text-sm">{{c.describe}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5">
+        </div>
     </div>
+
 </div>
-<p class="text-2xl font-bold text-center border-t border-gray-400 p-2">{{include.three_title}}</p>
-<div class="grid grid-rows-3 grid-flow-col gap-4 justify-center w-full max-w-5xl mx-auto text-sm sm:text-lg">
-    <div class="row-start-2 row-span-2">
-        <span class="flex top-0 right-0">{{include.title_of_photo9}}</span>
-        <img class=" w-full rounded-lg" src="{{include.url_of_photo9}}">
-    </div>
-    <div class="row-end-3 row-span-2">
-        <img class=" w-full rounded-lg" src="{{include.url_of_photo10}}">
-        <span>{{include.title_of_photo10}}</span></div>
-    <div class="row-start-1 row-end-4">
-        <img class=" w-full rounded-lg" src="{{include.url_of_photo11}}">
-        <span>{{include.title_of_photo11}}</span>
-    </div>
-</div>
-<div class="flex w-full max-w-5xl mx-auto text-sm sm:text-lg ">
-    <div class="flex-1  text-center px-4 py-2 ">
-        <div class="row-start-2 row-span-2">
-            <img class=" w-full rounded-lg m-1" src="{{include.url_of_photo12}}">
-            <span>{{include.title_of_photo12}}</span></div>
-    </div>
-    <div class="flex-1  text-center px-4 py-2 ">
-        <div class="row-start-2 row-span-2"><img class=" w-full rounded-lg m-1" src="{{include.url_of_photo13}}">
-            <span>{{include.title_of_photo13}}</span></div>
-    </div>
-    <div class="flex-1  text-center px-4 py-2 ">
-        <div class="row-start-2 row-span-2"><img class=" w-full rounded-lg m-1" src="{{include.url_of_photo14}}">
-            <span>{{include.title_of_photo14}}</span></div>
-    </div>
-</div>
-<div class="flex w-full max-w-5xl mx-auto text-sm sm:text-lg ">
-    <div class="flex-1  text-center px-4 py-2 ">
-        <div class="row-start-2 row-span-2">
-            <img class=" w-full rounded-lg m-1" src="{{include.url_of_photo15}}">
-            <span>{{include.title_of_photo15}}</span></div>
-    </div>
-    <div class="flex-1  text-center px-4 py-2 ">
-        <div class="row-start-2 row-span-2"><img class=" w-full rounded-lg m-1" src="{{include.url_of_photo16}}">
-            <span>{{include.title_of_photo16}}</span></div>
-    </div>
-    <div class="flex-1  text-center px-4 py-2 ">
-        <div class="row-start-2 row-span-2"><img class=" w-full rounded-lg m-1" src="{{include.url_of_photo17}}">
-            <span>{{include.title_of_photo17}}</span></div>
+<p class="text-2xl font-bold text-center border-t border-gray-400 p-4">{{site.data.exhibition.three_title}}</p>
+<div class="w-full max-w-5xl mx-auto rounded-t-sm overflow-hidden text-sm sm:text-lg">
+    <div class="not-prose relative bg-slate-50 rounded-xl overflow-hidden dark:bg-slate-800/25 mb-8">
+        <div class="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]"
+             style="background-position: 10px 10px;">
+            <p class="p-4">{{site.data.exhibition.three_describe}}</p>
+        </div>
+        <div class="relative rounded-xl overflow-auto">
+            <div class="w-full flex gap-12 snap-x overflow-x-auto py-14">
+                {% for s in site.data.seg %}
+                <div class="snap-start scroll-ml-6 shrink-0 relative first:pl-6 last:pr-[calc(100%-50rem)]">
+                    <img class="relative shrink-0 w-auto h-80 rounded-lg shadow-xl bg-white"
+                         src="{{s.url}}">
+                    <p class="text-center">{{s.title}}</p>
+                    <p class="text-center text-gray-700 text-sm">{{s.describe}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5">
+        </div>
     </div>
 </div>
 
-<p class="text-2xl font-bold text-center border-t border-gray-400 p-2" id="paper">{{include.four_title}}</p>
+<p class="text-2xl font-bold text-center border-t border-gray-400 p-2" id="paper">
+    {{site.data.exhibition.four_title}}</p>
 <div class="bg-teal-200 p-6 w-11/12 sm:max-w-5xl mx-auto text-sm sm:text-lg rounded-lg m-4">
     <img class="float-right ml-4 my-2 h-32" src="">
-    <p class="text-center"><span class="font-bold">{{include.four_paper_sug}}</span>
-        <a class="text-purple-700 text-opacity-100 p-2 underline" href={{include.four_paper_url}}>
-            {{include.four_paper_url}} </a>
+    <p class="text-center"><span class="font-bold">{{site.data.exhibition.four_paper_sug}}</span>
+        <a class="text-purple-700 text-opacity-100 p-2 underline" href={{site.data.exhibition.four_paper_url}}>
+            {{site.data.exhibition.four_paper_url}} </a>
     </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh
-        nec nisi euismod mollis ultrices condimentum velit. Proin velit libero, interdum ac rhoncus sit amet,
-        pellentesque ac turpis. Quisque ac luctus turpis, vel efficitur ante. Cras convallis risus vel vehicula dapibus.
-        Donec eget neque fringilla, faucibus mi quis, porttitor magna. Cras pellentesque leo est, et luctus neque rutrum
-        eu. Aliquam consequat velit sed sem posuere, vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum
-        fringilla. Donec varius vehicula magna sit amet auctor. Ut congue vehicula lectus in blandit. Vivamus suscipit
-        eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra, efficitur odio eu, finibus
-        justo. Etiam eu vehicula felis.</p>
+    <p>{{site.data.exhibition.four_paper_describe}}</p>
 </div>
-
 </body>

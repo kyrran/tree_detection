@@ -1,6 +1,6 @@
 ---
 layout : about
-title: "数据集"
+title: "关于作者"
 permalink : /about
 ---
 
