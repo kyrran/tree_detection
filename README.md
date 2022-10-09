@@ -1,6 +1,6 @@
-# jekyll-dataset 模板
+# dataset-jekyll 模板
 ***
-- 本模板不需要像GitHub给的主题一样用gem管理插件，克隆本仓库直接调试:
+- 本模板不需要像GitHub给的主题一样用gem管理插件，克隆本仓库，然后直接调试:
 ```angular2html
 jekyll serve --livereload
 ```
@@ -9,6 +9,8 @@ jekyll serve --livereload
 bash run.sh
 ```
 
+- 查看[示例模板](https://foreverlz1111.github.io/dataset_jekyll/)
+- 
 ### 截图
 - 横屏![](Screenshot_XL.png "大型设备")
 
@@ -57,7 +59,7 @@ something: "better"
 ```angular2html
 <!- 这里是eye.html ，现在可以用刚刚传过来的变量，实际输出内容为 to_there -->
 <body>
-<p>{{ include.word}}</p>
+<p>{{ include.word }}</p>
 </body>
 ```
 
