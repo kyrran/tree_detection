@@ -10,7 +10,7 @@ bash run.sh
 ```
 
 - 查看[示例模板](https://foreverlz1111.github.io/dataset_jekyll/)
-- 
+
 ### 截图
 - 横屏![](Screenshot_XL.png "大型设备")
 
