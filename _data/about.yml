@@ -1,9 +1,8 @@
 about_img_url : "assets/img/class/class7.jpg" #作者头像，留空则不显示
-email : "hi@ziyuan.work"
-content : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis et lorem sit amet vehicula. Etiam vel nibh nec nisi euismod mollis ultrices condimentum velit.
-Proin velit libero, interdum ac rhoncus sit amet, pellentesque ac turpis. Quisque ac luctus turpis,
-vel efficitur ante. Cras convallis risus vel vehicula dapibus. Donec eget neque fringilla, faucibus mi quis,
-porttitor magna. Cras pellentesque leo est, et luctus neque rutrum eu. Aliquam consequat velit sed sem posuere,
-vitae sollicitudin mi consequat. Mauris eget ipsum sed dui rutrum fringilla. Donec varius vehicula magna sit amet auctor.
-Ut congue vehicula lectus in blandit. Vivamus suscipit eleifend turpis, nec sodales sem vulputate a. Curabitur pulvinar libero viverra,
-efficitur odio eu, finibus justo. Etiam eu vehicula felis." #作者介绍
+email : "917251944@qq.com"
+content : "Tingting Yang https://orcid.org/0000-0001-5441-1188 (0000-0001-5441-1188)
+She received B.S degree in GIS from Anhui Science and Technology University in 2017. 
+She graduated from Zhejiang Agriculture and Forestry University with a master's degree in forestry Information technology.
+She is currently working as a doctoral candidate of Zhejiang Agriculture and Forestry University in Zhejiang, China. 
+Her main research covers Deep Learning and Image Processing. 
+" #作者介绍
