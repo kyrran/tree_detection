@@ -1,18 +1,17 @@
-one_title : "Introduction"
-one_p1 : "你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
-你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
-你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好"
+one_title : "Abstract"
+one_p1 : "The Tree Dataset of Urban Street is a public, available and comprehensive dataset, covering 50 tree species and 41467 high-resolution classification images (22872 annotated images) from 10 city scenes. Our dataset consists of leaf, tree, trunk, branch, flower, fruit classification sub-datasets and leaf, tree, trunk, branch segmentation sub-datasets. "
 one_button_url : "https://github.com/ytt917251944/dataset_jekyll/releases"
 one_button_name : "GitHub"
-two_title : "Examples:Classification Images"
-two_describe : "这是分类好的树叶"
+one_download_title : "Download Link"
 
+two_title : "Examples:Classification Images"
+two_describe : ""
 three_title : "Examples:Segmentation Images"
-three_describe : "这是进行图像分割后的树叶"
+three_describe : ""
 
 four_paper_sug : "Paper："
 four_title : "The Urban Street Tree dataset for"
-four_paper_url : "https://www.go.org"
-four_paper_describe : "论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍论文介绍"
+four_paper_url : ""
+four_paper_describe : "The Tree Dataset of Urban Street for Image Classification and Instance Segmentation"
 
-update_time : "2022-09-24"
+update_time : "Nov. 23 2022"

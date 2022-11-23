@@ -1,0 +1,24 @@
+- name : "Tree"
+  url: "https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-segmentation-tree"
+  describe : ""
+  number : "3949 images, 22 classes"
+  size : "7.9G"
+
+- name : "Branch"
+  url: "https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-segmentation-branch"
+  describe : ""
+  number : "1485 images, 13 classes"
+  size : "3.1G"
+
+- name : "Trunk"
+  url: "https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-segmentation-trunk"
+  describe : ""
+  number : "7675 images, 29 classes"
+  size : "12.9G"
+
+- name : "Leaf"
+  url: "https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-segmentation-leaf"
+  describe : ""
+  number : "9763 images, 39 classes"
+  size : "10.2G"
+

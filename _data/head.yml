@@ -2,7 +2,7 @@ header_icon_url : "assets/img/leaf.png" #左上角图标的文件路径
 header_title : "DataSet" #左上角图标的标题
 home_url : "https://ytt917251944.github.io/dataset_jekyll/" #首页按钮的链接
 header_to_download_url : "https://github.com/ytt917251944/dataset_jekyll/" #下载按钮的链接
-header_to_download : "去GitHub仓库" #下载按钮的显示文本
-header_about : "关于作者" #按钮的显示文本
-header_paper : "论文" #按钮的显示文本
-header_home : "首页" #按钮的显示文本
+header_to_download : "GitHub Project" #下载按钮的显示文本
+header_about : "Author" #按钮的显示文本
+header_paper : "Paper" #按钮的显示文本
+header_home : "Home" #按钮的显示文本
