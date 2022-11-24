@@ -7,7 +7,7 @@
 - name : "Trunk"
   url: "https://www.kaggle.com/datasets/erickendric/tree-dataset-of-urban-street-classification-trunk"
   describe : ""
-  number : "7675 images, 29 classes "
+  number : "7675 images, 29 classes"
   size : "6.4G"
 
 - name : "Leaf"
