@@ -10,8 +10,8 @@ three_title : "Examples:Segmentation Images"
 three_describe : ""
 
 four_paper_sug : "Paper："
-four_title : "The Urban Street Tree dataset for"
-four_paper_url : ""
+four_title : "Urban Street Tree Dataset for Image Classification and Instance Segmentation"
+four_paper_url : "https://doi.org/10.1016/j.compag.2023.107852"
 four_paper_describe : "The Tree Dataset of Urban Street for Image Classification and Instance Segmentation"
 
 update_time : "Nov. 24 2022"
