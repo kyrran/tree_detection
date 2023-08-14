@@ -31,7 +31,7 @@
     <div class="flex-1 mt-2 rounded w-full max-w-3xl mx-auto text-sm sm:text-lg float-left">
         <p class="text-2xl font-bold text-center ">{{ site.data.exhibition.one_download_title }}</p>
         <p class="italic">Updated：{{ site.data.exhibition.update_time }}</p>
-        <p class="font-bold">Classification：</p>
+        <p class="font-bold">Classification: </p>
         <ul class="list-disc list-inside">
             {% for c in site.data.downloadclass %}
             <li>{{ c.name }}
@@ -41,9 +41,19 @@
             </li>
             {% endfor %}
         </ul>
-        <p class="font-bold">Segmentation：</p>
+        <p class="font-bold">Segmentation: </p>
         <ul class="list-disc list-inside">
             {% for c in site.data.downloadseg %}
+            <li>{{ c.name }}
+                <text class="text-green-600">{{c.number}}</text>
+                <a target="_blank" class="border-b text-blue-600 hover:bg-sky-200 visited:text-purple-600" href="{{c.url}}">Download
+                    ({{c.size}})</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <p class="font-bold">Detection: </p>
+        <ul class="list-disc list-inside">
+            {% for c in site.data.downloaddet %}
             <li>{{ c.name }}
                 <text class="text-green-600">{{c.number}}</text>
                 <a target="_blank" class="border-b text-blue-600 hover:bg-sky-200 visited:text-purple-600" href="{{c.url}}">Download
