@@ -1,5 +1,0 @@
-- name : "Leaf"
-  url: "https://www.kaggle.com/datasets/erickendric/object-detection-leaf"
-  describe : ""
-  number : "9763 images, 39 classes"
-  size : "11G"
