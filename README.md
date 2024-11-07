@@ -24,3 +24,5 @@ Several **augmentation techniques** have been applied to enhance model robustnes
 - **Grayscale**: Applied to 12% of images to simulate different lighting conditions.
 - **Blur**: Up to 1.5 pixels to mimic focus variations.
 - **Noise**: Added to up to 0.1% of pixels to introduce subtle distortions.
+
+the first model trained on Roboflow can be acccessed [here](https://universe.roboflow.com/treedetection-hn4hr/urben-tree-detection/model/1)
